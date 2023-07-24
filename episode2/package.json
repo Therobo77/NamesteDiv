@@ -1,0 +1,17 @@
+{
+  "name": "episode2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "checkallsystem"
+  },
+  "keywords": [
+    "ok"
+  ],
+  "author": "vikash",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
