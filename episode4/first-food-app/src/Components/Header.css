@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    border: 2px solid red;
+    border-radius: 4px;
+    justify-content: space-between;
+    /* height: 90px; */
+}
+.header-comp img{
+    width: 150px;
+    height: 100px;
+    margin-left: 25px;
+}
+.header-comp{
+    display: flex;
+    font-size: 24px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+.all-key{
+    /* border: 1px solid black; */
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background: blue;
+    color: white;
+}
