@@ -1,0 +1,9 @@
+.restaurant-card{
+    border: 2px solid ;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    gap: 8px;
+}
