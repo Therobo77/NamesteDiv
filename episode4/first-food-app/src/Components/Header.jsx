@@ -1,10 +1,13 @@
 import React from 'react'
 import "./Header.css"
+import { LOGO_IMAGE } from '../utils/constants'
+
+
 export default function Header() {
   return (
     <div className='header'>
         <div className="header-comp">
-            <img src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/39-Food-Delivery-Logos-That-Will-Leave-You-Hungry-For-More/food-app-by-town-brandcrowd.png" alt="" />
+            <img src={LOGO_IMAGE} alt="" />
         </div>
         <div className="header-comp">
             <div className="all-key">Home</div>
