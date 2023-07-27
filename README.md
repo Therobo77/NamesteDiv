@@ -10,3 +10,7 @@ CDN --> Content Delivery Network , a place or server where code base of REACT js
 
 ## Episode:-> 2
 - NPM --> does not stand for node package manager but it manages packages
+
+
+## Episode:-> 2
+- difference between Monolith Architect and microservice Architecture.

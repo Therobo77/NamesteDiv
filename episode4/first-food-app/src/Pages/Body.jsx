@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RestaurantCard from "../Components/RestaurantCard";
 import "./Body.css";
 import { allrestaurants } from "../utils/constants";
@@ -8,6 +8,11 @@ const Body = () => {
   //   const filterFun= () =>{
   // console.log(allrestaurants.length) //
   //   }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  const fetchData = () => {};
   return (
     <div>
       <div className="search-and-filter">
@@ -15,16 +20,19 @@ const Body = () => {
           onClick={() => {
             //  filterFun
             // console.log(allrestaurants.length)
-            let filterlist= allrestaurants.filter(
-              (res)=>res.rating > 4 )
-              setRestaurantdata(filterlist)
+            let filterlist = allrestaurants.filter((res) => res.rating > 4);
+            setRestaurantdata(filterlist);
           }}
         >
           Filter by +4 Rating
         </button>
-        <button onClick={()=>{
-          setRestaurantdata(allrestaurants)
-        }}>Reset</button>
+        <button
+          onClick={() => {
+            setRestaurantdata(allrestaurants);
+          }}
+        >
+          Reset
+        </button>
       </div>
       <div className="restaurant-card">
         {restaurantdata.map((el, i) => {
