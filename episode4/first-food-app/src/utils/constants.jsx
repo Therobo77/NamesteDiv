@@ -18,7 +18,7 @@ export const FOOD_IMAGE_URL =
       },
       phone: "+1 (555) 123-4567",
       website: "http://www.gourmetfusion.com",
-      rating: 4.7,
+      rating: 3.7,
       menu: [
         {
           id: 101,
@@ -130,7 +130,7 @@ export const FOOD_IMAGE_URL =
       },
       phone: "+1 (555) 123-4567",
       website: "http://www.gourmetfusion.com",
-      rating: 4.7,
+      rating: 3.7,
       menu: [
         {
           id: 101,
@@ -242,7 +242,7 @@ export const FOOD_IMAGE_URL =
       },
       phone: "+1 (555) 123-4567",
       website: "http://www.gourmetfusion.com",
-      rating: 4.7,
+      rating: 3.7,
       menu: [
         {
           id: 101,
@@ -354,7 +354,7 @@ export const FOOD_IMAGE_URL =
       },
       phone: "+1 (555) 123-4567",
       website: "http://www.gourmetfusion.com",
-      rating: 4.7,
+      rating: 3.7,
       menu: [
         {
           id: 101,
@@ -466,7 +466,7 @@ export const FOOD_IMAGE_URL =
       },
       phone: "+1 (555) 123-4567",
       website: "http://www.gourmetfusion.com",
-      rating: 4.7,
+      rating: 3.7,
       menu: [
         {
           id: 101,
@@ -578,7 +578,7 @@ export const FOOD_IMAGE_URL =
       },
       phone: "+1 (555) 123-4567",
       website: "http://www.gourmetfusion.com",
-      rating: 4.7,
+      rating: 3.7,
       menu: [
         {
           id: 101,

@@ -3,7 +3,7 @@ import "./RestaurantCard.css"
 import { FOOD_IMAGE_URL } from '../utils/constants'
 
 const RestaurantCard = (props) => {
-  console.log(props.resdata)
+  // console.log(props.resdata)
   const {name,rating,phone,cuisine}=props.resdata
   return (
     <div className="res-Card">
