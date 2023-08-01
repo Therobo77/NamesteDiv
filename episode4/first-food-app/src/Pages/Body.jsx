@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "../Components/RestaurantCard";
 import "./Body.css";
-import { allrestaurants } from "../utils/constants";
+// import { allrestaurants } from "../utils/constants";
+import Shinner from './Shinner';
 
 const Body = () => {
-  const [restaurantdata, setRestaurantdata] = useState(allrestaurants);
+  const [restaurantdata, setRestaurantdata] = useState([]);
   //   const filterFun= () =>{
   // console.log(allrestaurants.length) //
   //   }
@@ -12,7 +13,12 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  const fetchData = () => {};
+  const fetchData = async () => {
+    let data = await fetch("https://dummyjson.com/products");
+    let jsondata = await data.json();
+    setRestaurantdata(jsondata.products)
+    // console.log(jsondata);
+  };
   return (
     <div>
       <div className="search-and-filter">
@@ -20,22 +26,22 @@ const Body = () => {
           onClick={() => {
             //  filterFun
             // console.log(allrestaurants.length)
-            let filterlist = allrestaurants.filter((res) => res.rating > 4);
+            let filterlist = restaurantdata.filter((res) =>  res.rating >= 3);
             setRestaurantdata(filterlist);
           }}
         >
-          Filter by +4 Rating
+          Filter by 3-4 Rating
         </button>
         <button
           onClick={() => {
-            setRestaurantdata(allrestaurants);
+            setRestaurantdata(restaurantdata);
           }}
         >
           Reset
         </button>
       </div>
       <div className="restaurant-card">
-        {restaurantdata.map((el, i) => {
+        {restaurantdata.length===0?<Shinner/>:restaurantdata.map((el, i) => {
           return <RestaurantCard key={i} resdata={el} />;
         })}
       </div>
