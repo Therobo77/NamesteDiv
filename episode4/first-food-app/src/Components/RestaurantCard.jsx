@@ -22,7 +22,7 @@ import "./RestaurantCard.css";
   ]
 },*/
 const RestaurantCard = (props) => {
-  console.log(props.resdata);
+  // console.log(props.resdata);
   const { title, brand, category, rating, description, thumbnail } =
     props.resdata;
   return (

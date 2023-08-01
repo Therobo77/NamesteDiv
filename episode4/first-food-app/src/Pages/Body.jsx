@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "../Components/RestaurantCard";
 import "./Body.css";
 // import { allrestaurants } from "../utils/constants";
-import Shinner from './Shinner';
+import Shinner from "./Shinner";
 
 const Body = () => {
   const [restaurantdata, setRestaurantdata] = useState([]);
@@ -16,7 +16,7 @@ const Body = () => {
   const fetchData = async () => {
     let data = await fetch("https://dummyjson.com/products");
     let jsondata = await data.json();
-    setRestaurantdata(jsondata.products)
+    setRestaurantdata(jsondata.products);
     // console.log(jsondata);
   };
   return (
@@ -26,7 +26,7 @@ const Body = () => {
           onClick={() => {
             //  filterFun
             // console.log(allrestaurants.length)
-            let filterlist = restaurantdata.filter((res) =>  res.rating >= 3);
+            let filterlist = restaurantdata.filter((res) => res.rating >= 4.5);
             setRestaurantdata(filterlist);
           }}
         >
@@ -41,9 +41,13 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurant-card">
-        {restaurantdata.length===0?<Shinner/>:restaurantdata.map((el, i) => {
-          return <RestaurantCard key={i} resdata={el} />;
-        })}
+        {restaurantdata.length === 0 ? (
+          <Shinner />
+        ) : (
+          restaurantdata.map((el, i) => {
+            return <RestaurantCard key={i} resdata={el} />;
+          })
+        )}
       </div>
     </div>
   );
