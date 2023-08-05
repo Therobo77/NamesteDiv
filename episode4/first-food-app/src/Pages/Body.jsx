@@ -7,7 +7,6 @@ import Shinner from "./Shinner";
 const Body = () => {
   const [restaurantdata, setRestaurantdata] = useState([]);
   const [filterdata, setfilterdata] = useState([]);
-
   const [searchdata, setsearchdata] = useState("");
 
   useEffect(() => {
