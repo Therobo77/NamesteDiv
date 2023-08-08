@@ -1,25 +1,31 @@
-import React, { useState } from 'react'
-import "./Header.css"
-import { LOGO_IMAGE } from '../utils/constants'
-
-
+import React, { useState } from "react";
+import "./Header.css";
+import { LOGO_IMAGE } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const [btnName, setbtnName] = useState("LogIn")
+  const [btnName, setbtnName] = useState("LogIn");
   return (
-    <div className='header'>
-        <div className="header-comp">
-            <img src={LOGO_IMAGE} alt="" />
+    <div className="header">
+      <div className="header-comp">
+        <img src={LOGO_IMAGE} alt="" />
+      </div>
+      <div className="header-comp">
+        <div className="all-key">Home</div>
+        <div className="all-key">
+          <Link to="about">About Us</Link>
         </div>
-        <div className="header-comp">
-            <div className="all-key">Home</div>
-            <div className="all-key">About Us</div>
-            <div className="all-key">Contact Us</div>
-            <div className="all-key">Cart</div>
-            <button className="all-key" onClick={()=>{
-              btnName==="LogIn"?setbtnName("LogOut"):setbtnName("LogIn")
-            }}>{btnName}</button>
-        </div>
+        <div className="all-key">Contact Us</div>
+        <div className="all-key">Cart</div>
+        <button
+          className="all-key"
+          onClick={() => {
+            btnName === "LogIn" ? setbtnName("LogOut") : setbtnName("LogIn");
+          }}
+        >
+          {btnName}
+        </button>
+      </div>
     </div>
-  )
+  );
 }
