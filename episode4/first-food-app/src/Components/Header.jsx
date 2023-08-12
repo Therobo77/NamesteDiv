@@ -8,10 +8,15 @@ export default function Header() {
   return (
     <div className="header">
       <div className="header-comp">
-        <img src={LOGO_IMAGE} alt="" />
+        <Link to="/">
+          
+          <img src={LOGO_IMAGE} alt="" />
+        </Link>
       </div>
       <div className="header-comp">
-        <div className="all-key">Home</div>
+        <div className="all-key">
+          <Link to="/">Home</Link>
+        </div>
         <div className="all-key">
           <Link to="about">About Us</Link>
         </div>

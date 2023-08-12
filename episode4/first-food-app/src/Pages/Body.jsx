@@ -3,6 +3,7 @@ import RestaurantCard from "../Components/RestaurantCard";
 import "./Body.css";
 // import { allrestaurants } from "../utils/constants";
 import Shinner from "./Shinner";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [restaurantdata, setRestaurantdata] = useState([]);
@@ -53,6 +54,7 @@ const Body = () => {
                 (res) => res.rating >= 4.5
               );
               setRestaurantdata(filterlist);
+              console.log("Restaurants",filterlist)
             }}
           >
             Top Rated
@@ -71,8 +73,12 @@ const Body = () => {
         {restaurantdata.length === 0 ? (
           <Shinner />
         ) : (
-          filterdata.map((el, i) => {
-            return <RestaurantCard key={i} resdata={el} />;
+          restaurantdata.map((el, _) => {
+            return (
+              <Link key={el.id} to={`/restaurants/${el.id}`}>
+                <RestaurantCard resdata={el} />
+              </Link>
+            );
           })
         )}
       </div>
